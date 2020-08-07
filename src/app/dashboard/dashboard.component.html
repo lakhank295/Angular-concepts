@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar" [class.active]="activeFlag">
+            <ul class="list-unstyled components">
+                <li>
+                    <a routerLinkActive="active" [routerLink]="'/special'"><i class="fa fa-calendar"></i>&nbsp; Special
+                        Data</a>
+                </li>
+                <li>
+                    <a routerLinkActive="active" [routerLink]="'/user-list'"><i class="fa fa-users"></i>&nbsp; ToDo List</a>
+                </li>
+
+                <li>
+                    <a routerLinkActive="active" [routerLink]="'/socket'"><i class="fa fa-bar-chart"></i>&nbsp; Real Time Grph</a>
+                </li>
+            </ul>
+        </nav>
+        
+
+        <!-- Page Content Holder -->
+        <div id="content">
+            <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="navbar-btn float-left" [class.active]="activeFlag"
+                        (click)="toggleActive()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav> -->
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

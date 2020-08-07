@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand">Eventhub</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <!-- <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/events'" routerLinkActive="active">Events</a>
+      </li> -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Members</a>
+      </li> -->
+    </ul>
+    <ul class="navbar-nav">
+        <a class="nav-link" *ngIf="!_service.getToken()" routerLinkActive="active" [routerLink]="'/login'">Login</a>
+        <a class="nav-link" *ngIf="!_service.getToken()" routerLinkActive="active" [routerLink]="'/register'">Register</a>
+        <a class="nav-link" style="cursor:pointer" (click) = "logout()" *ngIf="_service.getToken()" routerLinkActive="active">Logout</a>        
+    </ul>
+  </div>
+</nav>
